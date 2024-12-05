@@ -1,0 +1,30 @@
+[
+    {
+        "_id": "b101",
+        "title": "Infinite Loop Detected",
+        "description": "Occurs when function calls itself infinitely.",
+        "severity": 4,
+        "createdAt": 1542107359454
+    },
+    {
+        "_id": "b102",
+        "title": "Keyboard Not Found",
+        "description": "This issue arises when the computer can't find the keyboard.",
+        "severity": 3,
+        "createdAt": 1542107359655
+    },
+    {
+        "_id": "b103",
+        "title": "404 Coffee Not Found",
+        "description": "Coffee not available, perhaps a missing coffee machine?",
+        "severity": 2,
+        "createdAt": 1542107352651
+    },
+    {
+        "_id": "b104",
+        "title": "Unexpected Response",
+        "description": "Received an unexpected response from the server.",
+        "severity": 1,
+        "createdAt": 1542117352650
+    }
+]
