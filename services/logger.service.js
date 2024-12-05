@@ -1,8 +1,8 @@
 import fs from 'fs'
 
 export const loggerService = {
-  debug(...args) {
-    doLog('DEBUG', ...args)
+  detoy(...args) {
+    doLog('DEtoy', ...args)
   },
   info(...args) {
     doLog('INFO', ...args)

@@ -2,7 +2,7 @@ import express from 'express'
 import cookieParser from 'cookie-parser'
 import cors from 'cors'
 
-import { bugService } from './services/bug.service.js'
+import { toyService } from './services/toy.service.js'
 import { userService } from './services/user.service.js'
 import { loggerService } from './services/logger.service.js'
 import PDFDocument from 'pdfkit'
@@ -25,75 +25,75 @@ const corsOptions = {
 app.use(cors(corsOptions))
 
 
-// Retrieve bugs with filtering, sorting, and pagination
-app.get('/api/bug', (req, res) => {
+// Retrieve toys with filtering, sorting, and pagination
+app.get('/api/toy', (req, res) => {
     const { sortBy, sortDir = 1, pageIdx = 0, pageSize = 5, txt, minSeverity, labels } = req.query
 
-    bugService.query({ sortBy, sortDir, pageIdx, pageSize, txt, minSeverity, labels })
-        .then(bugs => res.json(bugs))
+    toyService.query({ sortBy, sortDir, pageIdx, pageSize, txt, minSeverity, labels })
+        .then(toys => res.json(toys))
         .catch(err => {
-            loggerService.error('Failed to query bugs', err)
-            res.status(500).send('Cannot get bugs')
+            loggerService.error('Failed to query toys', err)
+            res.status(500).send('Cannot get toys')
         })
 })
 
-// Retrieve bug by ID with limited view tracking
-app.get('/api/bug/:bugId', (req, res) => {
-    const { bugId } = req.params
-    let visitedBugs = req.cookies.visitedBugs || []
+// Retrieve toy by ID with limited view tracking
+app.get('/api/toy/:toyId', (req, res) => {
+    const { toyId } = req.params
+    let visitedtoys = req.cookies.visitedtoys || []
 
-    if (!visitedBugs.includes(bugId)) {
-        visitedBugs.push(bugId)
-        if (visitedBugs.length > 3) {
-            loggerService.warn(`User visited more than 3 bugs: ${visitedBugs}`)
+    if (!visitedtoys.includes(toyId)) {
+        visitedtoys.push(toyId)
+        if (visitedtoys.length > 3) {
+            loggerService.warn(`User visited more than 3 toys: ${visitedtoys}`)
             return res.status(401).send('Wait for a bit')
         }
-        res.cookie('visitedBugs', visitedBugs, { maxAge: 7000 })
+        res.cookie('visitedtoys', visitedtoys, { maxAge: 7000 })
     }
 
-    bugService.getById(bugId)
-        .then(bug => res.json(bug))
+    toyService.getById(toyId)
+        .then(toy => res.json(toy))
         .catch(err => {
-            loggerService.error(`Bug not found with ID: ${bugId}`, err)
-            res.status(404).send('Bug not found')
+            loggerService.error(`toy not found with ID: ${toyId}`, err)
+            res.status(404).send('toy not found')
         })
 })
 
-// Create or update a bug
-app.post('/api/bug', (req, res) => {
-    const bug = req.body
-    bugService.save(bug)
-        .then(savedBug => res.json(savedBug))
+// Create or update a toy
+app.post('/api/toy', (req, res) => {
+    const toy = req.body
+    toyService.save(toy)
+        .then(savedtoy => res.json(savedtoy))
         .catch(err => {
-            loggerService.error('Failed to save bug', err)
-            res.status(500).send('Cannot save bug')
+            loggerService.error('Failed to save toy', err)
+            res.status(500).send('Cannot save toy')
         })
 })
 
-app.put('/api/bug/:bugId', (req, res) => {
-    const { bugId } = req.params
-    const bug = req.body
-    bugService.save({ ...bug, _id: bugId })
-        .then(updatedBug => res.json(updatedBug))
+app.put('/api/toy/:toyId', (req, res) => {
+    const { toyId } = req.params
+    const toy = req.body
+    toyService.save({ ...toy, _id: toyId })
+        .then(updatedtoy => res.json(updatedtoy))
         .catch(err => {
-            loggerService.error('Failed to update bug', err)
-            res.status(500).send('Cannot update bug')
+            loggerService.error('Failed to update toy', err)
+            res.status(500).send('Cannot update toy')
         })
 })
 
-// Delete a bug
-app.delete('/api/bug/:bugId', (req, res) => {
+// Delete a toy
+app.delete('/api/toy/:toyId', (req, res) => {
     const user = userService.validateToken(req.cookies.loginToken)
     if (!user) return res.status(401).send('Not logged in')
 
-    const { bugId } = req.params
-    bugService.getById(bugId)
-        .then(bug => {
-            if (bug.creator._id !== user._id) return res.status(403).send('Unauthorized')
-            return bugService.remove(bugId)
+    const { toyId } = req.params
+    toyService.getById(toyId)
+        .then(toy => {
+            if (toy.creator._id !== user._id) return res.status(403).send('Unauthorized')
+            return toyService.remove(toyId)
         })
-        .then(() => res.send('Bug removed'))
-        .catch(err => res.status(500).send('Cannot remove bug'))
+        .then(() => res.send('toy removed'))
+        .catch(err => res.status(500).send('Cannot remove toy'))
 })
 
 // Auth API: Login, Signup, Logout
@@ -128,21 +128,21 @@ app.post('/api/auth/logout', (req, res) => {
     res.send('Logged out')
 })
 
-// Download bug report as PDF
-app.get('/api/bug/download', (req, res) => {
+// Download toy report as PDF
+app.get('/api/toy/download', (req, res) => {
     const doc = new PDFDocument()
-    let filename = 'bugs_report.pdf'
+    let filename = 'toys_report.pdf'
 
     res.setHeader('Content-disposition', `attachment; filename="${filename}"`)
     res.setHeader('Content-type', 'application/pdf')
 
-    doc.fontSize(18).text('Bugs Report', { align: 'center' })
-    bugService.query().then(bugs => {
-        bugs.forEach(bug => {
-            doc.fontSize(12).text(`Title: ${bug.title}`)
-            doc.text(`Description: ${bug.description}`)
-            doc.text(`Severity: ${bug.severity}`)
-            doc.text(`Created At: ${new Date(bug.createdAt).toLocaleString()}`)
+    doc.fontSize(18).text('toys Report', { align: 'center' })
+    toyService.query().then(toys => {
+        toys.forEach(toy => {
+            doc.fontSize(12).text(`Title: ${toy.title}`)
+            doc.text(`Description: ${toy.description}`)
+            doc.text(`Severity: ${toy.severity}`)
+            doc.text(`Created At: ${new Date(toy.createdAt).toLocaleString()}`)
             doc.moveDown()
         })
         doc.pipe(res)
