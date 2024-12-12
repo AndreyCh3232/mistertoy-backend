@@ -1,7 +1,7 @@
-import fs from 'fs'
+import fs from 'fs/promises'
 import { utilService } from './util.service.js'
 
-const toys = utilService.readJsonFile('data/toy.json')
+let toys = await utilService.readJsonFile('data/toy.json')
 const PAGE_SIZE = 5
 
 export const toyService = {
@@ -11,8 +11,8 @@ export const toyService = {
     remove,
 }
 
-function query({ sortBy, sortDir = 1, pageIdx = 0, pageSize = PAGE_SIZE, txt, minSeverity, labels } = {}) {
-    var filteredtoys = toys
+async function query({ sortBy, sortDir = 1, pageIdx = 0, pageSize = PAGE_SIZE, txt, minSeverity, labels } = {}) {
+    let filteredtoys = toys
 
     // Filtering
     if (txt) {
@@ -46,33 +46,36 @@ function query({ sortBy, sortDir = 1, pageIdx = 0, pageSize = PAGE_SIZE, txt, mi
 
     return Promise.resolve(toys)
 }
-function getById(toyId) {
+
+async function getById(toyId) {
     const toy = toys.find((toy) => toy._id === toyId)
-    if (!toy) return Promise.reject('cannot find toy' + toyId)
-    return Promise.resolve(toy)
+    if (!toy) throw new Error(`Cannot find toy with ID ${toyId}`)
+    return toy
 }
 
-function remove(toyId) {
+async function remove(toyId) {
     const toyIdx = toys.findIndex((toy) => toy._id === toyId)
+    if (toyIdx === -1) throw new Error(`Cannot find toy with ID ${toyId}`)
     toys.splice(toyIdx, 1)
-    return _savetoysToFile()
+    await _saveToysToFile()
 }
 
-function save(toyToSave) {
+async function save(toyToSave) {
     if (toyToSave._id) {
         const toyIdx = toys.findIndex((toy) => toy._id === toyToSave._id)
-        if (toyIdx === -1) return Promise.reject(`Cannot find toy with ID ${toyToSave._id}`)
+        if (toyIdx === -1) throw new Error(`Cannot find toy with ID ${toyToSave._id}`)
         toys[toyIdx] = toyToSave
     } else {
         toyToSave._id = utilService.makeId()
         toyToSave.createdAt = Date.now()
         toys.unshift(toyToSave)
     }
-    return _savetoysToFile().then(() => toyToSave)
+    await _saveToysToFile()
+    return toyToSave
 }
 
-function _savetoysToFile() {
-    return fs.writeFile('data/toy.json', JSON.stringify(toys, null, 2))
+async function _saveToysToFile() {
+    await fs.writeFile('data/toy.json', JSON.stringify(toys, null, 2))
 }
 
 // const STORAGE_KEY = 'toyDB'
