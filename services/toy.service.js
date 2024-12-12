@@ -44,7 +44,7 @@ async function query({ sortBy, sortDir = 1, pageIdx = 0, pageSize = PAGE_SIZE, t
     const startIdx = pageIdx * pageSize
     filteredtoys = filteredtoys.slice(startIdx, startIdx + pageSize)
 
-    return Promise.resolve(toys)
+    return filteredToys
 }
 
 async function getById(toyId) {
