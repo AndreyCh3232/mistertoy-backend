@@ -1,24 +1,31 @@
-import fs from 'fs'
+import fs from 'fs/promises'
 
 export const loggerService = {
   detoy(...args) {
-    doLog('DEtoy', ...args)
+    return doLog('DEtoy', ...args)
   },
   info(...args) {
-    doLog('INFO', ...args)
+    return doLog('INFO', ...args)
   },
   warn(...args) {
-    doLog('WARN', ...args)
+    return doLog('WARN', ...args)
   },
   error(...args) {
-    doLog('ERROR', ...args)
+    return doLog('ERROR', ...args)
   }
 }
 
 const logsDir = './logs'
-if (!fs.existsSync(logsDir)) {
-  fs.mkdirSync(logsDir)
+
+async function ensureLogsDir() {
+  try {
+    await fs.access(logsDir)
+  } catch {
+    await fs.mkdir(logsDir)
+  }
 }
+
+ensureLogsDir()
 
 //define the time format
 function getTime() {
@@ -30,12 +37,16 @@ function isError(e) {
   return e && e.stack && e.message
 }
 
-function doLog(level, ...args) {
+async function doLog(level, ...args) {
   const strs = args.map((arg) => (typeof arg === 'string' || isError(arg) ? arg : JSON.stringify(arg)))
-  var line = strs.join(' | ')
+  let line = strs.join(' | ')
   line = `${getTime()} - ${level} - ${line}\n`
+
   console.log(line)
-  fs.appendFile('./logs/backend.log', line, (err) => {
-    if (err) console.log('FATAL: cannot write to log file')
-  })
+
+  try {
+    await fs.appendFile(`${logsDir}/backend.log`, line)
+  } catch (err) {
+    console.error('FATAL: cannot write to log file', err)
+  }
 }
