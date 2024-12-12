@@ -1,4 +1,4 @@
-import fs from 'fs'
+import fs from 'fs/promises'
 
 export const utilService = {
     makeId,
@@ -47,8 +47,12 @@ function saveToStorage(keyDB, val) {
     localStorage.setItem(keyDB, valStr)
 }
 
-function readJsonFile(path) {
-    const str = fs.readFileSync(path, 'utf8')
-    const json = JSON.parse(str)
-    return json
+async function readJsonFile(path) {
+    try {
+        const str = await fs.readFile(path, 'utf8')
+        return JSON.parse(str)
+    } catch (err) {
+        console.error('Error reading JSON file:', err)
+        throw err
+    }
 }

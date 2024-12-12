@@ -12,28 +12,28 @@ export const toyService = {
 }
 
 async function query({ sortBy, sortDir = 1, pageIdx = 0, pageSize = PAGE_SIZE, txt, minSeverity, labels } = {}) {
-    let filteredtoys = toys
+    let filteredToys = toys
 
     // Filtering
     if (txt) {
-        filteredtoys = filteredtoys.filter(toy =>
+        filteredToys = filteredToys.filter(toy =>
             toy.title.toLowerCase().includes(txt.toLowerCase()) ||
             toy.description.toLowerCase().includes(txt.toLowerCase())
         )
     }
     if (minSeverity) {
-        filteredtoys = filteredtoys.filter(toy => toy.severity >= +minSeverity)
+        filteredToys = filteredToys.filter(toy => toy.severity >= +minSeverity)
     }
     if (labels) {
         const labelArr = labels.split(',')
-        filteredtoys = filteredtoys.filter(toy =>
+        filteredToys = filteredToys.filter(toy =>
             toy.labels.some(label => labelArr.includes(label))
         )
     }
 
     // Sorting
     if (sortBy) {
-        filteredtoys.sort((a, b) => {
+        filteredToys.sort((a, b) => {
             if (a[sortBy] < b[sortBy]) return sortDir === '1' ? -1 : 1;
             if (a[sortBy] > b[sortBy]) return sortDir === '1' ? 1 : -1;
             return 0
@@ -42,7 +42,7 @@ async function query({ sortBy, sortDir = 1, pageIdx = 0, pageSize = PAGE_SIZE, t
 
     // Paging
     const startIdx = pageIdx * pageSize
-    filteredtoys = filteredtoys.slice(startIdx, startIdx + pageSize)
+    filteredToys = filteredToys.slice(startIdx, startIdx + pageSize)
 
     return filteredToys
 }
