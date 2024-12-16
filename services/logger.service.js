@@ -27,7 +27,6 @@ async function ensureLogsDir() {
 
 ensureLogsDir()
 
-//define the time format
 function getTime() {
   let now = new Date()
   return now.toLocaleString('he')
