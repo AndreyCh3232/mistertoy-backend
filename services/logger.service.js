@@ -1,51 +1,53 @@
-import fs from 'fs/promises'
-
-export const loggerService = {
-  detoy(...args) {
-    return doLog('DEtoy', ...args)
-  },
-  info(...args) {
-    return doLog('INFO', ...args)
-  },
-  warn(...args) {
-    return doLog('WARN', ...args)
-  },
-  error(...args) {
-    return doLog('ERROR', ...args)
-  }
-}
+import fs from 'fs'
 
 const logsDir = './logs'
+if (!fs.existsSync(logsDir)) {
+  fs.mkdirSync(logsDir)
+}
 
-async function ensureLogsDir() {
-  try {
-    await fs.access(logsDir)
-  } catch {
-    await fs.mkdir(logsDir)
+export const logger = {
+  debug(...args) {
+    if (process.env.NODE_NEV === 'production') return
+    _doLog('DEBUG', ...args)
+  },
+  info(...args) {
+    _doLog('INFO', ...args)
+  },
+  warn(...args) {
+    _doLog('WARN', ...args)
+  },
+  error(...args) {
+    _doLog('ERROR', ...args)
   }
 }
 
-ensureLogsDir()
-
-function getTime() {
+function _getTime() {
   let now = new Date()
   return now.toLocaleString('he')
 }
 
-function isError(e) {
+function _isError(e) {
   return e && e.stack && e.message
 }
 
-async function doLog(level, ...args) {
-  const strs = args.map((arg) => (typeof arg === 'string' || isError(arg) ? arg : JSON.stringify(arg)))
-  let line = strs.join(' | ')
-  line = `${getTime()} - ${level} - ${line}\n`
+function _doLog(level, ...args) {
 
+  const strs = args.map(arg => {
+    if (typeof arg === 'string') {
+    } else if (_isError(arg)) {
+    } else if (arg instanceof Promise) {
+      arg = 'Promise'
+    } else {
+      console.log('STRINGIFY', arg)
+      arg = JSON.stringify(arg)
+    }
+    return arg
+  })
+
+  var line = strs.join(' | ')
+  line = `${_getTime()} - ${level} - ${line} \n`
   console.log(line)
-
-  try {
-    await fs.appendFile(`${logsDir}/backend.log`, line)
-  } catch (err) {
-    console.error('FATAL: cannot write to log file', err)
-  }
+  fs.appendFile('./logs/backend.log', line, (err) => {
+    if (err) console.log('FATAL: cannot write to log file')
+  })
 }
