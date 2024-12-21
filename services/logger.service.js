@@ -5,7 +5,7 @@ if (!fs.existsSync(logsDir)) {
   fs.mkdirSync(logsDir)
 }
 
-export const logger = {
+export const loggerService = {
   debug(...args) {
     if (process.env.NODE_NEV === 'production') return
     _doLog('DEBUG', ...args)
