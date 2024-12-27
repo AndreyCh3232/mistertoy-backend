@@ -145,3 +145,13 @@
 27.12.2024, 12:11:43 - INFO - Server listening on port http://127.0.0.1:3030/ 
 27.12.2024, 12:11:47 - INFO - Server listening on port http://127.0.0.1:3030/ 
 27.12.2024, 12:12:32 - INFO - Server listening on port http://127.0.0.1:3030/ 
+27.12.2024, 12:48:49 - INFO - Server listening on port http://127.0.0.1:3030/ 
+27.12.2024, 12:56:23 - DEBUG - auth.service - login with username: Andrey1 
+27.12.2024, 12:56:23 - INFO - User login:  | {"_id":"676d8a199f52a738f18be8fe","username":"Andrey1","fullname":"Andrey Chetvergov","score":0} 
+27.12.2024, 13:34:39 - INFO - Server listening on port http://127.0.0.1:3030/ 
+27.12.2024, 13:34:51 - INFO - Server listening on port http://127.0.0.1:3030/ 
+27.12.2024, 13:35:01 - INFO - Server listening on port http://127.0.0.1:3030/ 
+27.12.2024, 13:35:36 - INFO - Server listening on port http://127.0.0.1:3030/ 
+27.12.2024, 13:39:18 - INFO - Server listening on port http://127.0.0.1:3030/ 
+27.12.2024, 13:40:45 - INFO - Server listening on port http://127.0.0.1:3030/ 
+27.12.2024, 13:42:19 - INFO - Server listening on port http://127.0.0.1:3030/ 

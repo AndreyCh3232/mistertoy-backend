@@ -1,0 +1,20 @@
+[
+    {
+        "_id": {
+            "$oid": "6693c0ac62157821fbb7cb3e"
+        },
+        "username": "Andrey32",
+        "password": "3210",
+        "fullname": "Andrey Chetvergov",
+        "isAdmin": true
+    },
+    {
+        "_id": {
+            "$oid": "669ebd75f0de93587962c526"
+        },
+        "username": "Andrey30",
+        "password": "3232",
+        "fullname": "Andrey Chetvergov",
+        "isAdmin": false
+    }
+]

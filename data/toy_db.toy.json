@@ -1,0 +1,72 @@
+[
+    {
+        "_id": "668fba5ca1e5df1b7ae7864a",
+        "name": "Talking Doll",
+        "price": 80,
+        "labels": [
+            "Doll",
+            "Battery Powered",
+            "Baby"
+        ],
+        "createdAt": 1631031801011,
+        "inStock": false,
+        "msgs": []
+    },
+    {
+        "_id": "668fba5ca1e5df1b7ae7864b",
+        "name": "Wooden Puzzle Set",
+        "price": 45,
+        "labels": [
+            "Puzzle",
+            "Outdoor"
+        ],
+        "createdAt": 1631032801011,
+        "inStock": true,
+        "msgs": []
+    },
+    {
+        "_id": "668fba5ca1e5df1b7ae7864c",
+        "name": "Remote Control Car",
+        "price": 79,
+        "labels": [
+            "On wheels",
+            "Battery Powered",
+            "Outdoor"
+        ],
+        "createdAt": 1631033801011,
+        "inStock": true,
+        "msgs": []
+    },
+    {
+        "_id": "668fba5ca1e5df1b7ae7864d",
+        "name": "Colorful Building Blocks",
+        "price": 30,
+        "labels": [
+            "Baby",
+            "Box game"
+        ],
+        "createdAt": 1631034801011,
+        "inStock": false,
+        "msgs": [
+            {
+                "txt": "asd",
+                "by": {
+                    "_id": "6723bc1e4bdd83f431f39d6c",
+                    "fullname": "asd"
+                },
+                "id": "afLni"
+            }
+        ]
+    },
+    {
+        "_id": "668fba5ca1e5df1b7ae7864e",
+        "name": "Artistic Paint Set",
+        "price": 50,
+        "labels": [
+            "Art"
+        ],
+        "createdAt": 1631035801011,
+        "inStock": true,
+        "msgs": []
+    }
+]
