@@ -140,3 +140,5 @@
 27.12.2024, 12:08:26 - DEBUG - auth.service - login with username: Andrey1 
 27.12.2024, 12:08:26 - INFO - User login:  | {"_id":"676d8a199f52a738f18be8fe","username":"Andrey1","fullname":"Andrey Chetvergov","score":0} 
 27.12.2024, 12:09:59 - INFO - Server listening on port http://127.0.0.1:3030/ 
+27.12.2024, 12:11:06 - INFO - Server listening on port http://127.0.0.1:3030/ 
+27.12.2024, 12:11:14 - INFO - Server listening on port http://127.0.0.1:3030/ 
