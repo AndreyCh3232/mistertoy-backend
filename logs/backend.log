@@ -9,3 +9,134 @@
 22.12.2024, 1:01:18 - INFO - Server listening on port http://127.0.0.1:3030/ 
 22.12.2024, 1:01:35 - INFO - Server listening on port http://127.0.0.1:3030/ 
 22.12.2024, 1:02:00 - INFO - Server listening on port http://127.0.0.1:3030/ 
+22.12.2024, 15:36:43 - INFO - Server listening on port http://127.0.0.1:3030/ 
+22.12.2024, 15:38:02 - DEBUG - auth.service - login with username: Andrey 
+22.12.2024, 15:38:02 - ERROR - Failed to Login Error: Invalid username or password 
+22.12.2024, 15:38:07 - DEBUG - auth.service - login with username: Andrey 
+22.12.2024, 15:38:07 - ERROR - Failed to Login Error: Invalid username or password 
+22.12.2024, 15:38:35 - DEBUG - auth.service - signup with username: Andrey, fullname: Andrey Chetvergov 
+22.12.2024, 15:38:35 - ERROR - cannot insert user | Error: Username taken 
+22.12.2024, 15:38:35 - ERROR - Failed to signup Error: Username taken 
+22.12.2024, 15:45:50 - DEBUG - auth.service - signup with username: Andrey, fullname: Andrey Chetvergov 
+22.12.2024, 15:45:50 - ERROR - cannot insert user | Error: Username taken 
+22.12.2024, 15:45:50 - ERROR - Failed to signup Error: Username taken 
+22.12.2024, 15:49:13 - DEBUG - auth.service - login with username: Andrey 
+22.12.2024, 15:49:13 - ERROR - Failed to Login Error: Invalid username or password 
+22.12.2024, 15:49:34 - DEBUG - auth.service - login with username: puki 
+22.12.2024, 15:49:34 - ERROR - Failed to Login Error: Invalid username or password 
+22.12.2024, 15:50:02 - DEBUG - auth.service - signup with username: Andrey, fullname: Andrey Chetvergov 
+22.12.2024, 15:50:02 - ERROR - cannot insert user | Error: Username taken 
+22.12.2024, 15:50:02 - ERROR - Failed to signup Error: Username taken 
+22.12.2024, 15:50:24 - DEBUG - auth.service - signup with username: Andrey, fullname: Andrey Chetvergov 
+22.12.2024, 15:50:24 - ERROR - cannot insert user | Error: Username taken 
+22.12.2024, 15:50:24 - ERROR - Failed to signup Error: Username taken 
+22.12.2024, 15:54:34 - INFO - Server listening on port http://127.0.0.1:3030/ 
+22.12.2024, 15:55:12 - DEBUG - auth.service - signup with username: Andrey, fullname: Andrey Chetvergov 
+22.12.2024, 15:55:12 - ERROR - cannot insert user | Error: Username taken 
+22.12.2024, 15:55:12 - ERROR - Failed to signup Error: Username taken 
+22.12.2024, 15:57:17 - INFO - Server listening on port http://127.0.0.1:3030/ 
+22.12.2024, 15:58:29 - DEBUG - auth.service - signup with username: Andrey, fullname: Andrey Chetvergov 
+22.12.2024, 15:58:30 - ERROR - cannot insert user | Error: Username taken 
+22.12.2024, 15:58:30 - ERROR - Failed to signup Error: Username taken 
+22.12.2024, 15:58:41 - DEBUG - auth.service - login with username: Andrey 
+22.12.2024, 15:58:41 - ERROR - Failed to Login Error: Invalid username or password 
+22.12.2024, 16:04:07 - DEBUG - auth.service - signup with username: Andrey, fullname: Andrey Chetvergov 
+22.12.2024, 16:04:07 - ERROR - cannot insert user | Error: Username taken 
+22.12.2024, 16:04:07 - ERROR - Failed to signup Error: Username taken 
+22.12.2024, 16:05:31 - DEBUG - auth.service - signup with username: Andrey, fullname: Andrey Chetvergov 
+22.12.2024, 16:05:31 - ERROR - cannot insert user | Error: Username taken 
+22.12.2024, 16:05:31 - ERROR - Failed to signup Error: Username taken 
+22.12.2024, 16:11:28 - DEBUG - auth.service - login with username: Andrey 
+22.12.2024, 16:11:28 - ERROR - Failed to Login Error: Invalid username or password 
+22.12.2024, 16:11:44 - DEBUG - auth.service - signup with username: Andrey, fullname: Andrey Chetvergov 
+22.12.2024, 16:11:44 - ERROR - cannot insert user | Error: Username taken 
+22.12.2024, 16:11:44 - ERROR - Failed to signup Error: Username taken 
+22.12.2024, 16:22:54 - DEBUG - auth.service - signup with username: Andrey, fullname: Andrey Chetvergov 
+22.12.2024, 16:22:54 - ERROR - cannot insert user | Error: Username taken 
+22.12.2024, 16:22:54 - ERROR - Failed to signup Error: Username taken 
+22.12.2024, 16:30:17 - DEBUG - auth.service - signup with username: Andrey, fullname: Andrey Chetvergov 
+22.12.2024, 16:30:17 - ERROR - cannot insert user | Error: Username taken 
+22.12.2024, 16:30:17 - ERROR - Failed to signup Error: Username taken 
+22.12.2024, 16:32:02 - DEBUG - auth.service - signup with username: Andrey, fullname: Andrey Chetvergov 
+22.12.2024, 16:32:02 - ERROR - cannot insert user | Error: Username taken 
+22.12.2024, 16:32:02 - ERROR - Failed to signup Error: Username taken 
+22.12.2024, 16:48:25 - DEBUG - auth.service - signup with username: Andrey, fullname: Andrey Chetvergov 
+22.12.2024, 16:48:25 - ERROR - cannot insert user | Error: Username taken 
+22.12.2024, 16:48:25 - ERROR - Failed to signup Error: Username taken 
+22.12.2024, 16:50:05 - DEBUG - auth.service - signup with username: Andrey, fullname: Andrey Chetvergov 
+22.12.2024, 16:50:05 - ERROR - cannot insert user | Error: Username taken 
+22.12.2024, 16:50:05 - ERROR - Failed to signup Error: Username taken 
+22.12.2024, 16:53:55 - DEBUG - auth.service - login with username: Andrey 
+22.12.2024, 16:53:55 - ERROR - Failed to Login Error: Invalid username or password 
+22.12.2024, 16:58:42 - DEBUG - auth.service - login with username: Andrey 
+22.12.2024, 16:58:42 - ERROR - Failed to Login Error: Invalid username or password 
+22.12.2024, 17:06:24 - DEBUG - auth.service - login with username: Andrey 
+22.12.2024, 17:06:24 - ERROR - Failed to Login Error: Invalid username or password 
+22.12.2024, 18:35:51 - DEBUG - auth.service - signup with username: Andrey, fullname: Andrey Chetvergov 
+22.12.2024, 18:35:51 - ERROR - cannot insert user | Error: Username taken 
+22.12.2024, 18:35:51 - ERROR - Failed to signup Error: Username taken 
+22.12.2024, 19:11:36 - DEBUG - auth.service - signup with username: Andrey, fullname: Andrey Chetvergov 
+22.12.2024, 19:11:36 - ERROR - cannot insert user | Error: Username taken 
+22.12.2024, 19:11:36 - ERROR - Failed to signup Error: Username taken 
+23.12.2024, 20:36:56 - DEBUG - auth.service - signup with username: Andrey, fullname: Andrey Chetvergov 
+23.12.2024, 20:36:56 - ERROR - cannot insert user | Error: Username taken 
+23.12.2024, 20:36:56 - ERROR - Failed to signup Error: Username taken 
+25.12.2024, 16:11:06 - INFO - Server listening on port http://127.0.0.1:3030/ 
+25.12.2024, 16:12:02 - DEBUG - auth.service - login with username: Andrey 
+25.12.2024, 16:12:02 - ERROR - Failed to Login Error: Invalid username or password 
+25.12.2024, 16:12:13 - DEBUG - auth.service - signup with username: Andrey, fullname: Andrey Chetvergov 
+25.12.2024, 16:12:13 - ERROR - cannot insert user | Error: Username taken 
+25.12.2024, 16:12:13 - ERROR - Failed to signup Error: Username taken 
+25.12.2024, 17:40:23 - DEBUG - auth.service - login with username: Andrey 
+25.12.2024, 17:40:23 - ERROR - Failed to Login Error: Invalid username or password 
+25.12.2024, 19:21:22 - INFO - Server listening on port http://127.0.0.1:3030/ 
+25.12.2024, 19:22:59 - DEBUG - auth.service - login with username: Andrey 
+25.12.2024, 19:22:59 - ERROR - Failed to Login Error: Invalid username or password 
+25.12.2024, 19:23:13 - DEBUG - auth.service - signup with username: Andrey, fullname: Andrey Chetvergov 
+25.12.2024, 19:23:13 - ERROR - cannot insert user | Error: Username taken 
+25.12.2024, 19:23:13 - ERROR - Failed to signup Error: Username taken 
+25.12.2024, 19:42:00 - DEBUG - auth.service - login with username: Andrey 
+25.12.2024, 19:42:00 - ERROR - Failed to Login Error: Invalid username or password 
+25.12.2024, 19:46:47 - INFO - Server listening on port http://127.0.0.1:3030/ 
+25.12.2024, 19:48:05 - DEBUG - auth.service - login with username: Andrey 
+25.12.2024, 19:48:05 - ERROR - Failed to Login Error: Invalid username or password 
+25.12.2024, 19:48:17 - DEBUG - auth.service - signup with username: Andrey, fullname: Andrey Chetvergov 
+25.12.2024, 19:48:17 - ERROR - cannot insert user | Error: Username taken 
+25.12.2024, 19:48:17 - ERROR - Failed to signup Error: Username taken 
+25.12.2024, 19:54:27 - DEBUG - auth.service - login with username: Andrey 
+25.12.2024, 19:54:27 - ERROR - Failed to Login Error: Invalid username or password 
+25.12.2024, 19:54:36 - DEBUG - auth.service - login with username: Andrey 
+25.12.2024, 19:54:36 - ERROR - Failed to Login Error: Invalid username or password 
+25.12.2024, 19:56:26 - DEBUG - auth.service - login with username: Andrey 
+25.12.2024, 19:56:26 - ERROR - Failed to Login Error: Invalid username or password 
+26.12.2024, 12:44:45 - INFO - Server listening on port http://127.0.0.1:3030/ 
+26.12.2024, 12:45:58 - DEBUG - auth.service - login with username: Andrey 
+26.12.2024, 12:45:58 - ERROR - Failed to Login Error: Invalid username or password 
+26.12.2024, 18:46:02 - DEBUG - auth.service - login with username: Andrey 
+26.12.2024, 18:46:02 - ERROR - Failed to Login Error: Invalid username or password 
+26.12.2024, 18:48:23 - DEBUG - auth.service - login with username: Andrey 
+26.12.2024, 18:48:23 - ERROR - Failed to Login Error: Invalid username or password 
+26.12.2024, 18:50:41 - INFO - Server listening on port http://127.0.0.1:3030/ 
+26.12.2024, 18:51:02 - DEBUG - auth.service - login with username: Andrey 
+26.12.2024, 18:51:02 - ERROR - Failed to Login Error: Invalid password 
+26.12.2024, 18:52:59 - DEBUG - auth.service - signup with username: Andrey, fullname: Andrey Chetvergov 
+26.12.2024, 18:52:59 - ERROR - cannot insert user | Error: Username taken 
+26.12.2024, 18:52:59 - ERROR - Failed to signup Error: Username taken 
+26.12.2024, 18:53:45 - DEBUG - auth.service - signup with username: Andrey1, fullname: Andrey Chetvergov 
+26.12.2024, 18:53:45 - DEBUG - auth.route - new account created: {"username":"Andrey1","password":"$2b$10$Fi/2cbxN7WHY11Hng8DfIOCGVfRkn4DbYkhL6Th0o7KW3q4AqhIIO","fullname":"Andrey Chetvergov","score":0,"_id":"676d8a199f52a738f18be8fe"} 
+26.12.2024, 18:53:45 - DEBUG - auth.service - login with username: Andrey1 
+26.12.2024, 18:54:19 - DEBUG - auth.service - login with username: Andrey1 
+26.12.2024, 18:54:19 - INFO - User login:  | {"_id":"676d8a199f52a738f18be8fe","username":"Andrey1","fullname":"Andrey Chetvergov","score":0} 
+26.12.2024, 18:55:24 - DEBUG - auth.service - login with username: Andrey 
+26.12.2024, 18:55:24 - INFO - User login:  | {"_id":"9gaJ2U","username":"Andrey","fullname":"Andrey","isAdmin":true} 
+26.12.2024, 19:01:20 - INFO - Server listening on port http://127.0.0.1:3030/ 
+26.12.2024, 19:05:38 - INFO - Server listening on port http://127.0.0.1:3030/ 
+26.12.2024, 19:06:56 - INFO - Server listening on port http://127.0.0.1:3030/ 
+27.12.2024, 12:06:52 - INFO - Server listening on port http://127.0.0.1:3030/ 
+27.12.2024, 12:07:58 - DEBUG - auth.service - login with username: Andrey 
+27.12.2024, 12:07:58 - ERROR - Failed to Login Error: Invalid password 
+27.12.2024, 12:08:22 - DEBUG - auth.service - login with username: Andrey1 
+27.12.2024, 12:08:22 - ERROR - Failed to Login Error: Invalid password 
+27.12.2024, 12:08:26 - DEBUG - auth.service - login with username: Andrey1 
+27.12.2024, 12:08:26 - INFO - User login:  | {"_id":"676d8a199f52a738f18be8fe","username":"Andrey1","fullname":"Andrey Chetvergov","score":0} 
+27.12.2024, 12:09:59 - INFO - Server listening on port http://127.0.0.1:3030/ 

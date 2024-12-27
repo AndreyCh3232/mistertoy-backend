@@ -5,6 +5,7 @@ import { getToys, getToyById, addToy, updateToy, removeToy, addToyMsg, removeToy
 
 export const toyRoutes = express.Router()
 
+toyRoutes.get('/', getToys)
 toyRoutes.get('/:id', getToyById)
 toyRoutes.post('/', requireAuth, addToy)
 toyRoutes.put('/:id', requireAuth, updateToy)
