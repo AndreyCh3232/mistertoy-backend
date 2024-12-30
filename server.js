@@ -34,13 +34,18 @@ if (process.env.NODE_ENV === 'production') {
     app.use(cors(corsOptions))
 }
 import { authRoutes } from './api/auth/auth.routes.js'
+import { reviewRoutes } from './api/review/review.routes.js'
 import { userRoutes } from './api/user/user.routes.js'
 import { toyRoutes } from './api/toy/toy.routes.js'
+import { setupAsyncLocalStorage } from './middlewares/setupAls.middleware.js'
+
+app.all('*', setupAsyncLocalStorage)
 
 // routes
 app.use('/api/auth', authRoutes)
 app.use('/api/user', userRoutes)
 app.use('/api/toy', toyRoutes)
+app.use('/api/review', reviewRoutes)
 
 // app.get('/**', (req, res) => {
 //     res.sendFile(path.resolve('public/index.html'))

@@ -155,3 +155,49 @@
 27.12.2024, 13:39:18 - INFO - Server listening on port http://127.0.0.1:3030/ 
 27.12.2024, 13:40:45 - INFO - Server listening on port http://127.0.0.1:3030/ 
 27.12.2024, 13:42:19 - INFO - Server listening on port http://127.0.0.1:3030/ 
+27.12.2024, 13:45:17 - INFO - Server listening on port http://127.0.0.1:3030/ 
+27.12.2024, 13:46:23 - DEBUG - auth.service - login with username: Andrey32 
+27.12.2024, 13:46:23 - ERROR - Failed to Login Error: Invalid username 
+27.12.2024, 13:46:49 - DEBUG - auth.service - login with username: Andrey30 
+27.12.2024, 13:46:49 - ERROR - Failed to Login Error: Invalid username 
+27.12.2024, 13:47:00 - DEBUG - auth.service - login with username: Andrey32 
+27.12.2024, 13:47:00 - ERROR - Failed to Login Error: Invalid username 
+30.12.2024, 19:46:46 - INFO - Server listening on port http://127.0.0.1:3030/ 
+30.12.2024, 19:48:59 - DEBUG - auth.service - login with username: Andrey1 
+30.12.2024, 19:49:00 - INFO - User login:  | {"_id":"676d8a199f52a738f18be8fe","username":"Andrey1","fullname":"Andrey Chetvergov","score":0} 
+30.12.2024, 19:49:42 - DEBUG - auth.service - login with username: Andrey1 
+30.12.2024, 19:49:42 - INFO - User login:  | {"_id":"676d8a199f52a738f18be8fe","username":"Andrey1","fullname":"Andrey Chetvergov","score":0} 
+30.12.2024, 20:05:19 - INFO - Server listening on port http://127.0.0.1:3030/ 
+30.12.2024, 20:06:05 - INFO - Server listening on port http://127.0.0.1:3030/ 
+30.12.2024, 20:06:54 - INFO - Server listening on port http://127.0.0.1:3030/ 
+30.12.2024, 20:07:38 - DEBUG - auth.service - login with username: Andrey1 
+30.12.2024, 20:07:39 - INFO - User login:  | {"_id":"676d8a199f52a738f18be8fe","username":"Andrey1","fullname":"Andrey Chetvergov","score":0} 
+30.12.2024, 20:07:41 - INFO - Req was made | / 
+30.12.2024, 20:07:53 - INFO - Req was made | / 
+30.12.2024, 20:14:24 - INFO - Server listening on port http://127.0.0.1:3030/ 
+30.12.2024, 20:15:06 - DEBUG - auth.service - login with username: Andrey1 
+30.12.2024, 20:15:06 - INFO - User login:  | {"_id":"676d8a199f52a738f18be8fe","username":"Andrey1","fullname":"Andrey Chetvergov","score":0} 
+30.12.2024, 20:15:08 - INFO - Req was made | / 
+30.12.2024, 20:15:13 - INFO - Req was made | / 
+30.12.2024, 20:26:32 - INFO - Req was made | / 
+30.12.2024, 20:28:28 - INFO - Server listening on port http://127.0.0.1:3030/ 
+30.12.2024, 20:29:00 - INFO - Req was made | / 
+30.12.2024, 20:29:10 - INFO - Server listening on port http://127.0.0.1:3030/ 
+30.12.2024, 20:29:14 - INFO - Req was made | / 
+30.12.2024, 20:31:37 - INFO - Req was made | / 
+30.12.2024, 20:31:56 - INFO - Req was made | / 
+30.12.2024, 20:32:09 - INFO - Req was made | / 
+30.12.2024, 20:33:00 - DEBUG - auth.service - login with username: Andrey1 
+30.12.2024, 20:33:00 - INFO - User login:  | {"_id":"676d8a199f52a738f18be8fe","username":"Andrey1","fullname":"Andrey Chetvergov","score":0} 
+30.12.2024, 20:33:06 - INFO - Req was made | / 
+30.12.2024, 20:33:23 - INFO - Req was made | / 
+30.12.2024, 20:48:27 - INFO - Req was made | / 
+30.12.2024, 20:48:36 - INFO - Req was made | / 
+30.12.2024, 20:48:38 - INFO - Req was made | / 
+30.12.2024, 20:49:16 - INFO - Req was made | / 
+30.12.2024, 20:50:18 - INFO - Req was made | / 
+30.12.2024, 20:50:56 - INFO - Req was made | / 
+30.12.2024, 20:51:00 - INFO - Req was made | / 
+30.12.2024, 20:51:11 - INFO - Req was made | / 
+30.12.2024, 20:51:47 - INFO - Req was made | / 
+30.12.2024, 20:57:29 - INFO - Server listening on port http://127.0.0.1:3030/ 
